@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://zeptojs.com/zepto.min.js"></script>
+    <script src="infinity.min.js"></script>
+
+    <title>Document</title>
+    
+    <script>
+        $(function(){
+
+    
+            
+            /*
+                develope reverse system 
+                fix duplicate of events "onComplete .... etc"
+            */
+
+
+            
+            $("#Start").click(function(e){
+                infinity(".box").animate({
+                    backgroundColor : {to : "#000"},
+                    margin : {to : "+=100px",},
+                    width : {to : "+=100px"},
+
+                },{
+                    delay : 2000,
+                    repeat : 10,
+                    repeatDelay : 3000,
+                    reverse : true,
+                    reverseDelay : 1000,
+                    duration : 1000,
+               
+                })
+            });
+
+            $("#Stop").click(function(){
+                infinity(".box").stop()
+                
+                console.log(infinity(".box").css("width"))
+
+                
+              
+            });   
+         
+   
+
+
+        
+        });
+
+    </script>
+</head>
+
+<body>
+    <style>
+
+        .box{
+            background-color: rgb(193, 127, 255);
+            width: 80px;
+            height: 80px;
+            margin:10px
+  
+        }
+        .box.green{
+            background-color: green;
+        }
+        .box.orange{
+            background-color: orange;
+        }
+        .box.grey{
+            background-color: grey;
+        }
+
+    </style>
+
+
+    <!-- <div class="one"></div> -->
+    <button id="Start">Animate !</button>
+    <button id="Stop">Stop !</button>
+
+    <div class="box green" style="width:150px"></div>
+    <div class="box orange"></div>
+    <div class="box grey"></div>
+
+</body>
+</html>
