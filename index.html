@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://zeptojs.com/zepto.min.js"></script> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/1.5.2/css/ionicons.min.css">
+    <script src="jquery.js"></script>
+    <script src="infinity.js"></script>
+    <title>Document</title>
+    
+    <script>
+
+$(function(){
+    /**
+    *  Create hooks method
+    */
+
+    $("button").click(function(){
+
+
+        infinity(".card").animate({
+            backgroundColor: {to : "#CCC"},
+            width : { to : "200px"},
+            rotate : {to : "360deg"}
+        },{
+            reverse : true,
+        });
+    })
+
+
+});
+
+    </script>
+</head>
+
+<body>
+    <style>
+        .card{
+            background-color: #000;
+            width:50px;
+            height: 50px;
+            margin:10px;
+            position:relative
+        }
+
+
+    </style>
+    <button>Click</button>
+    <div class="card"></div>
+
+</body>
+</html>
