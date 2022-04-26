@@ -16,6 +16,19 @@ It also has very **simple**, **beautiful**, **easy-to-understand** source code a
 * Support complete callback
 * Support fully compatible standard easing effect and more.
 
+  ```js
+  linear,        smooth,
+  quadraticIn,   quadraticOut,   quadraticInOut
+  cubicIn,       cubicOut,       cubicInOut
+  quarticIn,     quarticOut,     quarticInOut
+  quinticIn,     quinticOut,     quinticInOut
+  exponentialIn, exponentialOut, exponentialInOut
+  sineIn,        sineOut,        sineInOut
+  circularIn,    circularOut,    circularInOut
+  elasticIn,     elasticOut,     elasticInOut
+  backIn,        backOut,        backInOut,  backInExponentialOut
+  , backInElasticOut , bounceIn,      bounceOut,      bounceInOut,
+  ```
 ## How to use
 
   ```js
