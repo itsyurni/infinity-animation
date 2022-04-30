@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://zeptojs.com/zepto.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="src/infinity.js"></script>
+    <script src="src/Queue.js"></script>
+    <script src="src/tween.js"></script>
+    <script src="src/easing.js"></script>
+    <title>Document</title>
+    
+    <script>
+
+$(function(){
+
+    $("#First").click(function(){
+
+        infinity(".target").animate({left:"-=10px",rotate:"360deg"},{duration:300, ease : "backIn",queue:false})
+        .animate({borderWidth:  "1px", height: "4em",  width: "4em"},{duration:100})
+        .animate({borderWidth: "100px", height: "0px",  width: "0px"}, {duration:600, ease : "bounceOut"})
+        .animate({borderWidth:  "1px", height: "4em",  width: "4em", left: 500}, {duration:500})
+        .animate({borderWidth: "100px", height:0,  width:0, left: 0},{duration: 800, delay : 200,ease : "exponentialOut"});
+
+    })
+
+    $("#Second").click(function(){
+        
+        
+  
+        infinity(".target")  
+        .animate({left: "500px", borderRadius: "100%"},  {duration:1000,queue:false})
+        .animate({width: "50px", height: "50px"}, {duration:200})
+        .animate({
+              backgroundColor:  "rgba(75, 120, 174, 0.56)",
+              borderTopColor:   "rgba(75, 120, 174, 0.56)",
+              borderRightColor: "rgba(75, 120, 174, 0.56)",
+              borderLeftColor:  "rgba(75, 120, 174, 0.56)",
+              borderBottomColor:"rgba(75, 120, 174, 0.56)",
+          },{duration: 400, ease :"linear"})		
+          .animate({backgroundColor:  "rgba(75, 81, 181, 0)"}, {duration:500})	
+          .animate({width: "0px",         height: "0px"}, {duration:200})			
+          .animate({borderBottomColor:"#CC3399"}, {duration:200})
+          .animate({borderLeftColor:  "#999900"}, {duration:200})
+          .animate({borderTopColor:   "#FF9933"}, {duration:200})
+          .animate({borderRightColor: "#339999"}, {duration:200})
+          .animate({left:   0, borderRadius:  "5px"},  {duration :300,delay: 200})
+    })
+});
+
+    </script>
+</head>
+
+<body>
+
+    <div class="demo-list">
+        <button id="First">EXAMPLE #1</button>
+        <button id="Second">EXAMPLE #2</button>
+        <div class="target"></div>      
+ 
+    </div>
+
+
+  
+
+</body>
+</html>
