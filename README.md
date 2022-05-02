@@ -3,7 +3,10 @@
 Infinity-Animation is a very **lightweight** and **powerful** javascript **Animation** engine. 
 
 It also has very **simple**, **beautiful**, **easy-to-understand** source code and **"Make-You-Happy"** API.
+* Released versions in [releases](https://github.com/itsyurni/infinity-animation/releases).
 
+
+The [Online Demo](https://itsyurni.github.io/infinity-animation/) shows the effect and code us
 
 ## Features
 
